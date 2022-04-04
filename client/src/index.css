@@ -1,0 +1,292 @@
+:root {
+  --text-color: #ccc;
+  --top-menu-bg-color: rgb(32, 38, 44);
+  --top-menu-height: 3rem;
+  --log-button-bg-color: rgb(107, 80, 12);
+  --message-box-bg-color: rgb(32, 38, 44);
+  --users-bar-width: 10rem;
+  --users-bar-bg-color: rgb(32, 38, 44);
+  --channels-list-width: 10rem;
+  --channels-list-bg-color: rgb(32, 38, 44);
+  --input-box-height: 2.5rem;
+  --message-bg-color: rgb(0, 109, 85);
+
+  --gap: 2px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100vw;
+}
+
+/* Coloring and decorations */
+/*-------------------------------------------------------------------------------------------*/
+
+body {
+  color: var(--text-color);
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgb(0, 0, 0) 0%,
+    rgb(7, 81, 90) 50%,
+    rgb(0, 0, 0) 90%
+  );
+}
+
+.top-menu {
+  background-color: var(--top-menu-bg-color);
+  padding: 0.3rem 0;
+}
+
+.user-menu > * {
+  margin-right: 0.3rem;
+}
+
+.user-menu .user-image {
+  border-radius: 50%;
+}
+
+.user-menu button {
+  background-color: var(--log-button-bg-color);
+  color: var(--text-color);
+  border: 0;
+  outline: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.channel-list-container {
+  background-color: var(--channels-list-bg-color);
+}
+
+.message-box {
+  background-color: var(--message-box-bg-color);
+}
+
+.messages {
+  overflow-y: scroll;
+}
+
+.message {
+  width: fit-content;
+  max-width: calc(100% - 1.75rem);
+  background-color: var(--message-bg-color);
+  padding: 0.7rem;
+  margin: 0 1rem 1rem 0.75rem;
+  border-radius: 8px;
+}
+
+.message .username {
+  margin-bottom: 0.3rem;
+}
+
+.input-box-container {
+  padding: 0.2rem 0;
+}
+
+.input-box-container textarea {
+  width: 90%;
+  background-color: #151515;
+  color: var(--text-color);
+  outline: none;
+  resize: none;
+  border: 0;
+  border-radius: 4px;
+  margin-left: 0.75rem;
+}
+
+.input-box-container button {
+  border: 0;
+  border-radius: 50%;
+  padding: 3px;
+  margin-left: 5px;
+  margin-right: 10px;
+}
+
+.input-box-container button:active {
+  transform: translate(1px, 1px);
+}
+
+.users-bar {
+  background-color: var(--users-bar-bg-color);
+}
+
+.users-bar {
+  padding: 10px;
+}
+
+.users-list {
+  margin-top: 10px;
+}
+
+.users-list li img {
+  border-radius: 50%;
+  margin-right: 0.15rem;
+}
+
+.users-list li {
+  margin-bottom: 10px;
+}
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(21, 100, 106);
+  border-radius: 10px;
+}
+
+/* Layout */
+/*-------------------------------------------------------------------------------------------*/
+
+.top-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+.top-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--top-menu-bg-color);
+}
+
+.user-menu {
+  display: flex;
+  align-items: center;
+}
+
+.user-menu .user-image {
+  display: block;
+  border-radius: 50%;
+}
+
+.main-container {
+  display: flex;
+  gap: var(--gap);
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-box-container {
+  display: flex;
+}
+
+.input-box-container textarea {
+  font-size: 1.2em;
+}
+
+.users-bar {
+  overflow: scroll;
+}
+
+.users-list {
+  display: flex;
+  height: calv(100vh - var(--top-menu-height) - var(--gap));
+  flex-direction: column;
+}
+
+.users-list li {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+.users-list li span {
+  display: inline-block;
+}
+
+/* Lexicographic */
+/*-------------------------------------------------------------------------------------------*/
+
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 12px;
+}
+
+.app-title {
+  font-size: 2rem;
+  letter-spacing: 0.15rem;
+}
+
+.user-menu .user-name {
+  font-size: 1.2rem;
+}
+
+.messages {
+  word-wrap: break-word;
+}
+
+.message .username {
+  font-weight: bold;
+  color: #ddd;
+}
+
+.input-box container textarea {
+  line-height: 1.5;
+}
+
+/* Dimensions */
+/*-------------------------------------------------------------------------------------------*/
+
+.top-container {
+  min-width: 600px;
+  height: 100vh;
+}
+
+.top-menu {
+  height: var(--top-menu-height);
+}
+
+.user-menu .user-image {
+  height: 1.8rem;
+}
+
+.user-menu button {
+  font-weight: bold;
+}
+
+.channel-list-container {
+  width: var(--channels-list-width);
+}
+
+.message-box {
+  height: calc(100vh - var(--top-menu-height) - var(--gap));
+  width: calc(100vw - var(--channels-list-width) - var(--users-bar-width));
+}
+
+.messages {
+  height: calc(
+    100vh - var(--top-menu-height) - var(--input-box-height) - var(--gap)
+  );
+}
+
+.input-box-container {
+  height: var(--input-box-height);
+  padding-bottom: 10px;
+}
+
+.input-box-container textarea {
+  width: 100%;
+}
+
+.users-bar {
+  width: var(--users-bar-width);
+}
+
+.users-list li img {
+  height: 1.7rem;
+}
