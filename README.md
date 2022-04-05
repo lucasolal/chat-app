@@ -3,7 +3,7 @@ Small chat app being developed as a personal project.
 
 See https://lucasolal-chat-app.herokuapp.com/ for an example of the deployed app.
 
-Uses Auth0 to authenticate users. You will need to set up an Auth0 single page application.
+Uses Auth0 to authenticate users and a Postgres database to persist messages. You will need to set up an Auth0 single page application and provide your client ID and Auth0 domain to the env variables as described below.
 
 **Environment Variables**
 
