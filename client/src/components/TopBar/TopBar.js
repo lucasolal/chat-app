@@ -7,7 +7,9 @@ export const TopBar = () => {
   const { socket } = useContext(Context);
   return (
     <nav className='top-menu'>
-      <span className='app-title'>Chat App</span>
+      <span className='app-title'>
+        Chat App, {process.env.REACT_APP_SERVER_URL}
+      </span>
       <div className='user-menu'>
         {user && isAuthenticated && (
           <>
