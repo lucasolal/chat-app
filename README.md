@@ -5,8 +5,8 @@ Uses Auth0 to authenticate users. You will need to set up an Auth0 single page a
 
 **Environment Variables**
 
-  * REACT_APP_SERVER_URL= URL of the application
-  * REACT_APP_AUTH0_DOMAIN= domain of the Auth0 application
-  * REACT_APP_AUTH0_CLIENT_ID= Client ID of the Auth0 Application
+  * REACT_APP_SERVER_URL: URL of the application
+  * REACT_APP_AUTH0_DOMAIN: domain of the Auth0 application
+  * REACT_APP_AUTH0_CLIENT_ID: Client ID of the Auth0 Application
 
 
